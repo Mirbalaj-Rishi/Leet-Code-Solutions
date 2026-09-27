@@ -3,7 +3,8 @@ class Solution:
     def exist(self, board: list[list[str]], word: str) -> bool:
         first_letter = word[0]
         result = False 
-        for letter in word: #check if all letters is in board
+        wordSet = set(word)
+        for letter in wordSet: #check if all letters is in board
             letterIn = False
             for i in board:
                 if letter in i:
